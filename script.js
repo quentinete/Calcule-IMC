@@ -1,28 +1,30 @@
+let Metre = true;
+let poid = true;
+
 function calculerIMC() {
     const poids = parseFloat(document.getElementById('Poids').value);
     const taille = parseFloat(document.getElementById('Taille').value);
     const saveChecked = document.getElementById('saveInputs').checked;
 
-    const imc = poids / (taille * taille);
 
-    console.log(imc)
+    const tailleFinale = Metre ? taille : taille / 100;
+    const poidsFinale = poid ? poids : poids / 1000;
+
+    const imc = poidsFinale / (tailleFinale * tailleFinale);
 
     let message = "";
 
-    if (isNaN(imc) || imc == 0) {
-        if ((isNaN(poids) || poids == 0) && (isNaN(taille) || taille == 0)) {
+    if (isNaN(imc) || imc < 0) {
+        if ((isNaN(poids) || poids < 0) && (isNaN(taille) || taille < 0)) {
             message = "Veuiller remplir correctement les champs !!!";
-            document.getElementById('IMC_affichage').innerText = `IMC : ${imc.toFixed(2)}`;
             document.getElementById('IMC_affichage1').innerText = `${message}`;
         }
-        else if (isNaN(poids) || poids == 0) {
+        else if (isNaN(poids) || poids < 0) {
             message = "le poid n'est pas correctement remplit !!!";
-            document.getElementById('IMC_affichage').innerText = `IMC : ${imc.toFixed(2)}  Le champs du poid est mal remplit :${poids}`;
             document.getElementById('IMC_affichage1').innerText = `${message}`;
         }
-        else if (isNaN(taille) || taille == 0) {
+        else if (isNaN(taille) || taille < 0) {
             message = "la taille n'est pas correctement remplit !!!";
-            document.getElementById('IMC_affichage').innerText = `IMC : ${imc.toFixed(2)}  Le champs de la taille est mal remplit :${taille}`;
             document.getElementById('IMC_affichage1').innerText = `${message}`;
         }
     }
@@ -54,3 +56,44 @@ function calculerIMC() {
     }
 }
 
+function changerUnite() {
+    const tailleInput = document.getElementById('Taille');
+    const switchBtn = document.getElementById('switch');
+    const bataille = document.getElementById('ba_taille');
+
+
+    let valeur = parseFloat(tailleInput.value);
+
+    if (tailleInput.placeholder == "Taille en cm."){
+        tailleInput.placeholder = "Taille en m.";
+        switchBtn.innerText = "Passer en cm";
+        bataille.innerText = "Taille en mètre :";
+        Metre = true;
+    } else {
+        tailleInput.placeholder = "Taille en cm.";
+        switchBtn.innerText = "Passer en m";
+        bataille.innerText = "Taille en cm :";
+        Metre = false;
+    }
+}
+
+function changerUnite_p() {
+    const poidsInput = document.getElementById('Poids');
+    const switchBtn = document.getElementById('switch_p');
+    const baPoids = document.getElementById('ba_poids');
+
+    let valeur = parseFloat(poidsInput.value);
+
+    if (poidsInput.placeholder == "Poids en gramme."){
+        poidsInput.placeholder = "Poids en kg.";
+        switchBtn.innerText = "Passer en gramme";
+        baPoids.innerText = "Poids en kg :";
+        poid = true;
+    } else {
+        poidsInput.placeholder = "Poids en gramme.";
+        switchBtn.innerText = "Passer en kg";
+        baPoids.innerText = "Poids en g :";
+        poid = false;
+    }
+
+}

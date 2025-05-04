@@ -2,13 +2,14 @@ body {
     background-color: #f4f4f4;
     margin: 0;
     padding: 0;
+    font-family: Arial, sans-serif;
     text-align: center;
 }
 
 header {
     background-color: #4CAF50;
     color: white;
-    padding: 15px 0;
+    padding: 20px 0;
 }
 
 header img {
@@ -19,59 +20,96 @@ header img {
 .titre {
     display: inline-block;
     margin-left: 10px;
+    font-size: 1.5rem;
+    vertical-align: middle;
 }
 
 div {
     margin: 40px auto;
-    max-width: 400px;
+    max-width: 500px;
     background-color: white;
     padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding-top: 1vw;
-    padding-bottom: 1vw;
-    margin-top: 1vw;
-    margin-bottom: 1vw;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding-top: 0.5vw;
+    padding-bottom: 0.5vw;
+    margin-top: 0.5vw;
+    margin-bottom: 0.5vw;
+}
+
+.input1 {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.input1 div {
+    margin-bottom: 15px;
+}
+
+.input1 p {
+    margin: 0 0 5px 0;
+    font-weight: bold;
 }
 
 .input1 input {
-    width: 90%;
+    width: calc(100% - 10px);
     padding: 10px;
     font-size: 1rem;
     border: 1px solid #ccc;
     border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.switch {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    padding: 7px 15px;
+    font-size: 0.9rem;
+    background-color: #7d0fe4;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.switch:hover {
+    background-color: #5e0bb0;
+    transform: scale(1.05);
 }
 
 button {
     padding: 10px 20px;
-    font-size: 1rem; 
+    font-size: 1rem;
     background-color: #4CAF50;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: transform 0.2s ease, background-color 0.3s ease;
 }
-
 
 button:hover {
     background-color: #45a049;
-    transition: background-color 0.3s ease;
-    transform: scale(0.8);
+    transform: scale(1.05);
 }
 
-#IMC_affichage, #IMC_affichage1 {
+#IMC_affichage, #IMC_affichage1, #saveMessage {
     font-weight: bold;
     margin-top: 10px;
 }
 
 #IMC_affichage {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     color: #333;
 }
 
 #IMC_affichage1 {
     color: #e60000;
+}
+
+#saveMessage {
+    color: #4CAF50;
 }
 
 footer {
@@ -80,13 +118,6 @@ footer {
     background-color: #ddd;
 }
 
-#saveInputs {
-    margin: 0;
-    padding: 0;
+#saveInputs, #Ch_T {
+    margin-right: 5px;
 }
-
-#saveLabel {
-    display: inline-block;
-    margin-left: 10px;
-}
-
