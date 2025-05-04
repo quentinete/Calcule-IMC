@@ -1,26 +1,80 @@
-body{
-    margin: 0px;
+body {
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    text-align: center;
 }
 
-header{
-    border-radius: 4px;
-    background-color: rgb(0, 0, 0);
-    margin: 0px;
-    color: antiquewhite;
-    display: flex;
-    justify-content: center; 
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 0;
 }
 
-#balance {
-    margin-top: 7px;
-    display: block;
-    width : 50px;
-    height : 50px;
-    float : left;
+header img {
+    width: 80px;
+    vertical-align: middle;
 }
 
-.titre{
+.titre {
+    display: inline-block;
     margin-left: 10px;
-    margin-top: 15px;
 }
+
+div {
+    margin: 40px auto;
+    width: 90%;
+    max-width: 400px;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1rem; 
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+
+button:hover {
+    background-color: #45a049;
+    transition: background-color 0.3s ease;
+    transform: scale(0.8);
+}
+
+#IMC_affichage, #IMC_affichage1 {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+#IMC_affichage {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+#IMC_affichage1 {
+    color: #e60000;
+}
+
+footer {
+    margin-top: 50px;
+    padding: 10px;
+    background-color: #ddd;
+}
+
 
