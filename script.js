@@ -64,13 +64,13 @@ function changerUnite() {
 
     let valeur = parseFloat(tailleInput.value);
 
-    if (tailleInput.placeholder == "Taille en cm."){
-        tailleInput.placeholder = "Taille en m.";
+    if (tailleInput.placeholder == "Taille en cm ('180')."){
+        tailleInput.placeholder = "Taille en m ('1.80').";
         switchBtn.innerText = "Passer en cm";
         bataille.innerText = "Taille en mètre :";
         Metre = true;
     } else {
-        tailleInput.placeholder = "Taille en cm.";
+        tailleInput.placeholder = "Taille en cm ('180').";
         switchBtn.innerText = "Passer en m";
         bataille.innerText = "Taille en cm :";
         Metre = false;
@@ -84,13 +84,13 @@ function changerUnite_p() {
 
     let valeur = parseFloat(poidsInput.value);
 
-    if (poidsInput.placeholder == "Poids en gramme."){
-        poidsInput.placeholder = "Poids en kg.";
+    if (poidsInput.placeholder == "Poids en gramme ('80')."){
+        poidsInput.placeholder = "Poids en kg ('80').";
         switchBtn.innerText = "Passer en gramme";
         baPoids.innerText = "Poids en kg :";
         poid = true;
     } else {
-        poidsInput.placeholder = "Poids en gramme.";
+        poidsInput.placeholder = "Poids en gramme ('80').";
         switchBtn.innerText = "Passer en kg";
         baPoids.innerText = "Poids en g :";
         poid = false;
