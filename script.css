@@ -23,16 +23,19 @@ header img {
 
 div {
     margin: 40px auto;
-    width: 90%;
     max-width: 400px;
     background-color: white;
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding-top: 1vw;
+    padding-bottom: 1vw;
+    margin-top: 1vw;
+    margin-bottom: 1vw;
 }
 
-input {
-    width: 100%;
+.input1 input {
+    width: 90%;
     padding: 10px;
     font-size: 1rem;
     border: 1px solid #ccc;
@@ -77,4 +80,13 @@ footer {
     background-color: #ddd;
 }
 
+#saveInputs {
+    margin: 0;
+    padding: 0;
+}
+
+#saveLabel {
+    display: inline-block;
+    margin-left: 10px;
+}
 

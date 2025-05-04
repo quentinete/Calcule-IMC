@@ -1,6 +1,7 @@
 function calculerIMC() {
     const poids = parseFloat(document.getElementById('Poids').value);
     const taille = parseFloat(document.getElementById('Taille').value);
+    const saveChecked = document.getElementById('saveInputs').checked;
 
     const imc = poids / (taille * taille);
 
@@ -41,6 +42,15 @@ function calculerIMC() {
         }
         document.getElementById('IMC_affichage').innerText = `IMC : ${imc.toFixed(2)}`;
         document.getElementById('IMC_affichage1').innerText = `${message}`;
+    }
+    if (saveChecked) {
+        console.log("save")
+        document.getElementById('saveMessage').innerText = "✅ Données sauvegardées.";
+    } else {
+        console.log("don't save")
+        document.getElementById('Poids').value = '';
+        document.getElementById('Taille').value = '';
+        document.getElementById('saveMessage').innerText = "❌ Données non sauvegardées.";
     }
 }
 

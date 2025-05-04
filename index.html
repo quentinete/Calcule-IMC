@@ -17,18 +17,25 @@
         <div>
             <h1>Calculer votre IMC</h1>
         </div>
-        <div>
-            <p>Poids en kg :</p>
-            <input id="Poids" type="number" placeholder="Poids en kg." /><br><br>
+        <div id="input1" class="input1">
+            <div>
+                <p>Poids en kg :</p>
+                <input id="Poids" type="number" placeholder="Poids en kg." /><br><br>
+            </div>
+            <div>
+                <p>Taille en mètre :</p>
+                <input id="Taille" type="number" step="0.01" placeholder="Taille en m." /><br><br>
+            </div>
         </div>
-        <div>
-            <p>Taille en mètre :</p>
-            <input id="Taille" type="number" step="0.01" placeholder="Taille en m." /><br><br>
+        <div id="save">
+            <input type="checkbox" id="saveInputs">
+            <label id="saveLabel" for="saveInputs">Sauvegarder mes données</label>
         </div>
         <button id="Calculer_input" onclick="calculerIMC()">Calculer</button><br><br>
         <section>
             <p id="IMC_affichage"></p>
             <p id="IMC_affichage1"></p>
+            <p id="saveMessage"></p>
         </section>
     </div>
 
