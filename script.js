@@ -1,4 +1,4 @@
 function calculerIMC() {
-    console.log("bk")
+    console.log("bj")
 }
 
