@@ -61,9 +61,6 @@ function changerUnite() {
     const switchBtn = document.getElementById('switch');
     const bataille = document.getElementById('ba_taille');
 
-
-    let valeur = parseFloat(tailleInput.value);
-
     if (tailleInput.placeholder == "Taille en cm ('180')."){
         tailleInput.placeholder = "Taille en m ('1.80').";
         switchBtn.innerText = "Passer en cm";
@@ -81,8 +78,6 @@ function changerUnite_p() {
     const poidsInput = document.getElementById('Poids');
     const switchBtn = document.getElementById('switch_p');
     const baPoids = document.getElementById('ba_poids');
-
-    let valeur = parseFloat(poidsInput.value);
 
     if (poidsInput.placeholder == "Poids en gramme ('80')."){
         poidsInput.placeholder = "Poids en kg ('80').";
