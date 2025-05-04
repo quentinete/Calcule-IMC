@@ -1,7 +1,7 @@
 # Projet Carrousel
 
 ## 1. Objectifs du projet
-- L'objectif du projet est de faire un carrousel d'image automatique a partir d'un dossier source contenant les images.  
+- L'objectif du projet est de faire un un calculateur d'IMC.  
 
 ---
 
@@ -11,8 +11,6 @@
         - **html** 
         - **css** 
         - **js**  
-    - **backend** :  
-        - **node js**
 ---
 
 ## 3.1 Installation via git clone 
