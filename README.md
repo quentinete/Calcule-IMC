@@ -1,4 +1,4 @@
-# Projet Carrousel
+# Projet IMC
 
 ## 1. Objectifs du projet
 - L'objectif du projet est de faire un un calculateur d'IMC.  
